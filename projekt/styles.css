@@ -1,0 +1,69 @@
+body {
+    font-family: Helvetica, sans-serif;
+    display: flex; /* Flexbox für die Anordnung */
+    height: 100vh; /* Vollständige Höhe des Viewports */
+    margin: 0;
+}
+
+#left, #right {
+    flex: 1; /* Die Container nehmen den gleichen Anteil des verfügbaren Platzes ein */
+    padding: 20px;
+    margin: 10px;
+    height: 100vh;
+    background-color: #f0f0f0;
+    color: #000;
+    box-sizing: border-box;
+}
+
+input {
+    width: 95%; /* Eingabefeld über die gesamte Breite */
+    padding: 10px;
+    font-size: 16px;
+}
+
+button {
+    padding: 5px; /* Padding für den Button */
+    font-size: 16px; /* Schriftgröße des Buttons */
+    cursor: pointer; /* Zeiger zeigt auf den Button */
+}
+
+  
+#container-left{
+    border: 4px solid black;
+    padding: 10px;
+    width: 95%;
+    box-sizing: border-box;
+}
+
+#container-right{
+    border: 4px solid red;
+    padding: 10px;
+    width: 95%;
+    box-sizing: border-box;
+}
+
+
+#container-left h2 {
+    color: black;
+    text-align: center;
+}
+
+#container-right h2 {
+    color: red;
+    text-align: center;
+}
+
+#container-right .content {
+    display: flex;
+    justify-content: space-between;
+}
+
+#exponent h3, #exponent p {
+    display: inline; /* Beide Tags werden auf einer Zeile angezeigt */
+    margin: 0; /* Entfernt den standardmäßigen Abstand */
+}
+
+#encryptedMessage, #decryptedMessage, #messageBinary, #messageDecimal{
+    word-wrap: break-word;  /* Ermöglicht den Umbruch bei langen Wörtern */
+    word-break: break-all;  /* Erzwingt den Umbruch auch bei langen Zeichenketten */
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Top_Secret</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/js-big-integer@3.0.26/BigInteger.min.js"></script>
+
+</head>
+<body>
+    <div id="left">
+        <h2>Sender</h2>
+        <input type="text" id="inputField" placeholder="Nachricht...">
+        <h3>Nachricht im Binärsystem:</h3>
+        <p id="messageBinary"></p>
+        <h3>Nachricht im Dezimalsystem M:</h3>
+        <p id="messageDecimal"></p> 
+        <button id="submitButton">Verschlüsseln: M<sup>e</sup>  in modulo n</button>
+        
+        <p style="margin-top: 20px;"></p>
+
+        <div id="container-left">
+            <h2>Öffentlich</h2>
+            <div class="content">
+                <div id="exponent">
+                    <h3>öffentlicher Exponent e (teilerfremd zu n):</h3>
+                    <p>65537</p>
+                </div>
+                <h3>öffentlicher Schlüssel (n = p &middot; q): <button id="showN" onclick="showNumber('n')">Mehr anzeigen</button></h3>
+            </div>
+        </div>
+    </div>
+    
+    <div id="right">
+        <h2>Empfänger</h2>
+        <h3>Verschlüsselte Nachricht im Hexadezimalsystem C:</h3>
+        <p id="encryptedMessage"></p>
+        <button id="decryptButton">Entschlüsseln: C<sup>d</sup>  in modulo n</button>
+        <h3>Entschlüsselte Nachricht:</h3>
+        <p id="decryptedMessage"></p>
+
+        <div id="container-right">
+            <h2>Privat!</h2>
+            <div class="content">
+                <div class="section">
+                    <h3>privat generierte Primzahlen:</h3>
+                    <p>p = <button id="showP" onclick="showNumber('p')">Mehr anzeigen</button></p>
+                    <p>q = <button id="showQ" onclick="showNumber('q')">Mehr anzeigen</button></p>
+                </div>
+                <div class="section">
+                    <h3>privater Schlüssel d:</h3>
+                    <p>&phi;(n) = (p-1) &middot; (q-1)</p>
+                    <p>d = e<sup>-1</sup> in modulo &phi;(n)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="createPrime.js"></script>
+    <script src="primes.js"></script>
+    <script src="schlüsselerstellung.js"></script>
+    <script src="verschlüsselung.js"></script>
+    <script src="entschlüsselung.js"></script>
+    <script src="gerüst.js"></script>
+
+
+</body>
+</html>

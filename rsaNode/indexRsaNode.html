@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSA Verschlüsselung mit Node</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/forge/0.10.0/forge.min.js"></script>
+</head>
+<body>
+    <h1>RSA Verschlüsselung mit Node</h1>
+    <textarea id="message" rows="4" cols="50" placeholder="Gib hier deine Nachricht ein..."></textarea><br>
+    <button id="encryptBtn">Verschlüsseln</button>
+    <button id="decryptBtn">Entschlüsseln</button>
+    
+    <h2>Ergebnisse</h2>
+    <h3>Verschlüsselte Nachricht:</h3>
+    <pre id="encryptedMessage"></pre>
+    
+    <h3>Entschlüsselte Nachricht:</h3>
+    <pre id="decryptedMessage"></pre>
+
+    <script src="rsaNode.js"></script>
+</body>
